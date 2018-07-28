@@ -1,4 +1,4 @@
-import { createStackNavigator } from 'react-navigation';
+import { createSwitchNavigator } from 'react-navigation';
 import {reduxifyNavigator, createReactNavigationReduxMiddleware} from 'react-navigation-redux-helpers';
 import { connect } from 'react-redux';
 import * as ScreenNames from './screen_names';
@@ -12,7 +12,7 @@ const navMiddleware = createReactNavigationReduxMiddleware(
   state => state.navigationData
 );
 
-const RootNavigator = createStackNavigator(
+const RootNavigator = createSwitchNavigator(
   {
     [ScreenNames.HOME_SCREEN]: HomeScreen,
     [ScreenNames.SIGNUP_FLOW]: SignupNavigator,

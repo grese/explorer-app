@@ -101,8 +101,6 @@ export const navigateToDisplayMap = params =>
     params
   });
 
-
-
 export const exitApp = () => {
   RNExitApp.exitApp();
 };
